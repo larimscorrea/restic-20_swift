@@ -12,6 +12,7 @@ class Solution {
         var num: [Int] = [Int]([1, 2, 3, 4, 5])
         var a = 0
         var b = 0
+        var int
         
         for num in nums where int is String {
             b = a + 1
