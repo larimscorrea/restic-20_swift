@@ -39,18 +39,14 @@
 //}
 
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-    // Loop passa cada elemento no array usando o loop for.
+    // Loop pelo primeiro elemento no array
     for i in 0..<nums.count {
-        // Pega o elemento complementar do elemento atual.
-        let complement = target - nums[i]
-        
-        // Usa o loop while para pesquisar pelo complemento no elemento restante.
-        var j = i + 1
-        while j < nums.count {
-            if nums[j] == complement {
+        // Loop pelo segundo elemento no array, começando pelo elemento após o primeiro
+        for j in (i + 1)..<nums.count {
+            // Verifica se a soma dos dois elementos é igual ao target
+            if nums[i] + nums[j] == target {
                 return [i, j]
             }
-            j += 1
         }
     }
     return []
@@ -70,6 +66,7 @@ print(twoSum(nums2, target2))  // Saída: [1, 2]
 let nums3 = [3, 3]
 let target3 = 6
 print(twoSum(nums3, target3))  // Saída: [0, 1]
+
 
 
 class Operacoes {
